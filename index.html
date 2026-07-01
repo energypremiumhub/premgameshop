@@ -42,12 +42,29 @@
             border-left: 5px solid #f5c842;
             padding-left: 15px;
         }
+
+        /* 🔥 ဒီနေရာမှာ ပြင်ထားတယ် - အလျားလိုက် ၅ ခုစီ */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(5, 1fr);  /* ၅ ခုစီ အလျားလိုက် */
             gap: 20px;
             margin-bottom: 30px;
         }
+
+        /* 📱 ဖုန်းသေးရင် ၂ ခုစီ ပြောင်းမယ် */
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* 📱 ဖုန်းအသေးဆုံးရင် ၁ ခုစီ */
+        @media (max-width: 480px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .card {
             background: #141b2b;
             border-radius: 15px;
