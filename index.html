@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Prem-Game Shop</title>
     <style>
         * {
@@ -15,62 +15,70 @@
         body {
             background: #0b0e1a;
             color: #fff;
-            padding: 15px;
+            padding: 20px;
+            min-width: 1000px; /* Desktop အတွက် သေချာကျယ်အောင် */
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         /* Header */
         .header {
             text-align: center;
-            padding: 20px 0;
+            padding: 25px 0;
             border-bottom: 2px solid #1f2a3f;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         .header h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #f5c842;
         }
 
         .header p {
             color: #8892b0;
-            font-size: 0.95rem;
-            margin-top: 4px;
+            font-size: 1.1rem;
+            margin-top: 5px;
         }
 
-        /* ===== FLEXBOX GRID ===== */
+        /* ===== Desktop: ၅ ကွက်စီ ===== */
         .grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 25px;
+            gap: 15px;
+            margin-bottom: 30px;
         }
 
-        /* ကတ်တစ်ခုချင်းစီကို ၃ ကွက်စီ */
         .grid .card {
-            flex: 0 0 calc(33.333% - 12px);
+            flex: 0 0 calc(20% - 15px); /* ၅ ကွက်စီ */
             background: #141b2b;
             border-radius: 12px;
-            padding: 14px 10px;
+            padding: 16px 12px;
             text-align: center;
             border: 1px solid #1f2a3f;
             transition: all 0.2s ease;
             cursor: pointer;
+            min-width: 0;
         }
 
-        /* Tablet: ၂ ကွက်စီ */
-        @media (max-width: 768px) {
+        /* Tablet: ၃ ကွက်စီ */
+        @media (max-width: 992px) {
             .grid .card {
-                flex: 0 0 calc(50% - 12px);
+                flex: 0 0 calc(33.333% - 15px);
             }
         }
 
-        /* ဖုန်း: ၁ ကွက်စီ */
-        @media (max-width: 480px) {
+        /* Phone: ၂ ကွက်စီ */
+        @media (max-width: 600px) {
+            .grid .card {
+                flex: 0 0 calc(50% - 15px);
+            }
+        }
+
+        /* Phone small: ၁ ကွက်စီ */
+        @media (max-width: 400px) {
             .grid .card {
                 flex: 0 0 100%;
             }
@@ -95,12 +103,12 @@
         }
 
         .card .bonus {
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             color: #64ffda;
         }
 
         .card .price {
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 700;
             color: #f5c842;
             margin: 6px 0;
@@ -110,10 +118,10 @@
             background: #f5c842;
             color: #0b0e1a;
             border: none;
-            padding: 5px 16px;
+            padding: 6px 18px;
             border-radius: 20px;
             font-weight: 700;
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             cursor: pointer;
             transition: all 0.15s ease;
         }
@@ -134,7 +142,7 @@
             padding: 15px;
             border-top: 1px solid #1f2a3f;
             color: #8892b0;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -148,7 +156,7 @@
         <p>Mobile Legends Diamond Top Up • Fast • Trusted</p>
     </div>
 
-    <!-- Bundles -->
+    <!-- ===== BUNDLES (၅ ကွက်) ===== -->
     <div class="grid">
         <div class="card">
             <div class="name">Monthly Epic</div>
@@ -181,16 +189,16 @@
             <div class="price">1,750 Ks</div>
             <button class="btn">Buy</button>
         </div>
+    </div>
 
+    <!-- ===== DIAMONDS (အကုန်ပါ) ===== -->
+    <div class="grid">
         <div class="card">
             <div class="name">33 Dia</div>
             <div class="price">2,500 Ks</div>
             <button class="btn">Buy</button>
         </div>
-    </div>
 
-    <!-- Diamonds -->
-    <div class="grid">
         <div class="card">
             <div class="name">44 Dia</div>
             <div class="price">3,300 Ks</div>
