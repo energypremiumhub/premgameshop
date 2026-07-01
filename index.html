@@ -42,22 +42,67 @@
             border-left: 5px solid #f5c842;
             padding-left: 15px;
         }
+
+        /* ===== အဓိက ပြင်ထားတာ ===== */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(5, 1fr);  /* ၅ ကွက် */
+            gap: 15px;
             margin-bottom: 30px;
         }
+
+        /* ===== ဖုန်းမှာလည်း ၅ ကွက်ပဲပြမယ် ===== */
         @media (max-width: 768px) {
             .product-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(5, 1fr);  /* ၅ ကွက်ပဲ */
+                gap: 10px;
+            }
+            .card {
+                padding: 12px 8px;
+            }
+            .card h3 {
+                font-size: 0.7rem;
+            }
+            .card .bonus {
+                font-size: 0.6rem;
+            }
+            .card .price {
+                font-size: 0.9rem;
+            }
+            .btn-buy {
+                padding: 5px 10px;
+                font-size: 0.6rem;
             }
         }
+
+        /* ===== ဖုန်းအသေးဆုံးမှာလည်း ၅ ကွက်ပဲ ===== */
         @media (max-width: 480px) {
             .product-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 6px;
+            }
+            .card {
+                padding: 8px 4px;
+                border-radius: 10px;
+            }
+            .card h3 {
+                font-size: 0.55rem;
+            }
+            .card .bonus {
+                font-size: 0.5rem;
+            }
+            .card .price {
+                font-size: 0.7rem;
+                margin: 5px 0;
+            }
+            .btn-buy {
+                padding: 4px 6px;
+                font-size: 0.5rem;
+                border-radius: 15px;
+                margin-top: 5px;
             }
         }
+
         .card {
             background: #141b2b;
             border-radius: 15px;
@@ -72,8 +117,6 @@
             border-color: #f5c842;
             box-shadow: 0 10px 25px rgba(245, 200, 66, 0.1);
         }
-
-        /* ===== ANIMATION ၁ - ကတ်ပြားလှုပ်တယ် ===== */
         .card:active {
             animation: cardShake 0.4s ease;
         }
@@ -101,7 +144,6 @@
             margin: 10px 0;
         }
 
-        /* ===== ANIMATION ၂ - ခလုတ် Bounce ===== */
         .btn-buy {
             background: #f5c842;
             color: #0b0e1a;
@@ -119,7 +161,6 @@
             background: #ffd966;
             transform: scale(1.05);
         }
-
         .btn-buy:active {
             animation: btnBounce 0.3s ease;
             background: #ff6b6b;
@@ -133,7 +174,6 @@
             100% { transform: scale(1); }
         }
 
-        /* ===== ANIMATION ၃ - Ripple Effect (ရေလှိုင်း) ===== */
         .btn-buy::after {
             content: '';
             position: absolute;
@@ -147,7 +187,6 @@
             transition: width 0.5s, height 0.5s, opacity 0.5s;
             pointer-events: none;
         }
-
         .btn-buy:active::after {
             width: 250px;
             height: 250px;
@@ -172,34 +211,31 @@
         <p>Mobile Legends Diamond Top Up • မြန်ဆန်သည် • စိတ်ချရသည်</p>
     </header>
 
-    <!-- Bundles -->
     <h2 class="section-title">🎁 အထုပ်များ</h2>
     <div class="product-grid">
-        <div class="card"><h3>Monthly Epic Bundle</h3><div class="bonus">275 + ★180</div><div class="price">17,200 Ks</div><button class="btn-buy">ဝယ်ယူရန်</button></div>
-        <div class="card"><h3>Weekly Elite Bundle</h3><div class="bonus">55 + ★20</div><div class="price">3,350 Ks</div><button class="btn-buy">ဝယ်ယူရန်</button></div>
-        <div class="card"><h3>Weekly Pass</h3><div class="price">6,500 Ks</div><button class="btn-buy">ဝယ်ယူရန်</button></div>
-        <div class="card"><h3>11 Diamonds</h3><div class="price">1,000 Ks</div><button class="btn-buy">ဝယ်ယူရန်</button></div>
-        <div class="card"><h3>22 Diamonds</h3><div class="price">1,750 Ks</div><button class="btn-buy">ဝယ်ယူရန်</button></div>
+        <div class="card"><h3>Monthly Epic</h3><div class="bonus">275+★180</div><div class="price">17,200 Ks</div><button class="btn-buy">ဝယ်</button></div>
+        <div class="card"><h3>Weekly Elite</h3><div class="bonus">55+★20</div><div class="price">3,350 Ks</div><button class="btn-buy">ဝယ်</button></div>
+        <div class="card"><h3>Weekly Pass</h3><div class="price">6,500 Ks</div><button class="btn-buy">ဝယ်</button></div>
+        <div class="card"><h3>11 Dia</h3><div class="price">1,000 Ks</div><button class="btn-buy">ဝယ်</button></div>
+        <div class="card"><h3>22 Dia</h3><div class="price">1,750 Ks</div><button class="btn-buy">ဝယ်</button></div>
     </div>
 
-    <!-- Small Diamonds -->
     <h2 class="section-title">💎 စိန်အသေး</h2>
     <div class="product-grid">
-        <div class="card"><h3>33 Diamonds</h3><div class="price">2,500 Ks</div><button class="btn-buy">ဝယ်ယူရန်</button></div>
-        <div class="card"><h3>44 Diamonds</h3><div class="price">3,300 Ks</div><button class="btn-buy">ဝယ်ယူရန်</button></div>
-        <div class="card"><h3>56 Diamonds</h3><div class="price">4,000 Ks</div><button class="btn-buy">ဝယ်ယူရန်</button></div>
-        <div class="card"><h3>86 Diamonds</h3><div class="price">5,500 Ks</div><button class="btn-buy">ဝယ်ယူရန်</button></div>
-        <div class="card"><h3>112 Diamonds</h3><div class="price">7,800 Ks</div><button class="btn-buy">ဝယ်ယူရန်</button></div>
+        <div class="card"><h3>33 Dia</h3><div class="price">2,500 Ks</div><button class="btn-buy">ဝယ်</button></div>
+        <div class="card"><h3>44 Dia</h3><div class="price">3,300 Ks</div><button class="btn-buy">ဝယ်</button></div>
+        <div class="card"><h3>56 Dia</h3><div class="price">4,000 Ks</div><button class="btn-buy">ဝယ်</button></div>
+        <div class="card"><h3>86 Dia</h3><div class="price">5,500 Ks</div><button class="btn-buy">ဝယ်</button></div>
+        <div class="card"><h3>112 Dia</h3><div class="price">7,800 Ks</div><button class="btn-buy">ဝယ်</button></div>
     </div>
 
-    <!-- Normal Diamonds -->
     <h2 class="section-title">💎 စိန်အလတ်</h2>
     <div class="product-grid">
-        <div class="card"><h3>172 Diamonds</h3><div class="price">10,700 Ks</div><button class="btn-buy">ဝယ်ယူရန်</button></div>
-        <div class="card"><h3>257 Diamonds</h3><div class="price">15,900 Ks</div><button class="btn-buy">ဝယ်ယူရန်</button></div>
-        <div class="card"><h3>343 Diamonds</h3><div class="price">21,100 Ks</div><button class="btn-buy">ဝယ်ယူရန်</button></div>
-        <div class="card"><h3>429 Diamonds</h3><div class="price">26,600 Ks</div><button class="btn-buy">ဝယ်ယူရန်</button></div>
-        <div class="card"><h3>514 Diamonds</h3><div class="price">31,200 Ks</div><button class="btn-buy">ဝယ်ယူရန်</button></div>
+        <div class="card"><h3>172 Dia</h3><div class="price">10,700 Ks</div><button class="btn-buy">ဝယ်</button></div>
+        <div class="card"><h3>257 Dia</h3><div class="price">15,900 Ks</div><button class="btn-buy">ဝယ်</button></div>
+        <div class="card"><h3>343 Dia</h3><div class="price">21,100 Ks</div><button class="btn-buy">ဝယ်</button></div>
+        <div class="card"><h3>429 Dia</h3><div class="price">26,600 Ks</div><button class="btn-buy">ဝယ်</button></div>
+        <div class="card"><h3>514 Dia</h3><div class="price">31,200 Ks</div><button class="btn-buy">ဝယ်</button></div>
     </div>
 
     <footer>
