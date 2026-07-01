@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="my">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prem-Game Shop</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Noto Sans Myanmar', 'Segoe UI', sans-serif;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
         }
         body {
             background: #0b0e1a;
@@ -35,21 +35,21 @@
             color: #8892b0;
             font-size: 0.9rem;
         }
-        
+
         .product-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 12px;
             margin-bottom: 25px;
         }
-        
+
         @media (max-width: 600px) {
             .product-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 8px;
             }
         }
-        
+
         @media (max-width: 400px) {
             .product-grid {
                 grid-template-columns: 1fr;
@@ -113,7 +113,7 @@
             background: #e6b33a;
             transition: 0.08s;
         }
-        
+
         .section-title {
             display: none;
         }
@@ -133,26 +133,30 @@
 
     <header>
         <h1>⚡ Prem-Game Shop</h1>
-        <p>Mobile Legends Diamond Top Up • မြန်ဆန်သည် • စိတ်ချရသည်</p>
+        <p>Mobile Legends Diamond Top Up • Fast • Trusted</p>
     </header>
 
+    <!-- Bundles -->
     <div class="product-grid">
-        <div class="card"><h3>Monthly Epic</h3><div class="bonus">275+★180</div><div class="price">17,200 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
-        <div class="card"><h3>Weekly Elite</h3><div class="bonus">55+★20</div><div class="price">3,350 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
-        <div class="card"><h3>Weekly Pass</h3><div class="price">6,500 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
+        <div class="card"><h3>Monthly Epic</h3><div class="bonus">275+★180</div><div class="price">17,200 Ks</div><button class="btn-buy">Buy</button></div>
+        <div class="card"><h3>Weekly Elite</h3><div class="bonus">55+★20</div><div class="price">3,350 Ks</div><button class="btn-buy">Buy</button></div>
+        <div class="card"><h3>Weekly Pass</h3><div class="price">6,500 Ks</div><button class="btn-buy">Buy</button></div>
+        <div class="card"><h3>11 Dia</h3><div class="price">1,000 Ks</div><button class="btn-buy">Buy</button></div>
+        <div class="card"><h3>22 Dia</h3><div class="price">1,750 Ks</div><button class="btn-buy">Buy</button></div>
+        <div class="card"><h3>33 Dia</h3><div class="price">2,500 Ks</div><button class="btn-buy">Buy</button></div>
+    </div>
+
+    <!-- Diamonds -->
     <div class="product-grid">
-        <div class="card"><h3>11 Dia</h3><div class="price">1,000 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
-        <div class="card"><h3>22 Dia</h3><div class="price">1,750 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
-        <div class="card"><h3>33 Dia</h3><div class="price">2,500 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
-        <div class="card"><h3>44 Dia</h3><div class="price">3,300 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
-        <div class="card"><h3>56 Dia</h3><div class="price">4,000 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
-        <div class="card"><h3>86 Dia</h3><div class="price">5,500 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
-        <div class="card"><h3>112 Dia</h3><div class="price">7,800 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
-        <div class="card"><h3>172 Dia</h3><div class="price">10,700 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
-        <div class="card"><h3>257 Dia</h3><div class="price">15,900 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
-        <div class="card"><h3>343 Dia</h3><div class="price">21,100 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
-        <div class="card"><h3>429 Dia</h3><div class="price">26,600 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
-        <div class="card"><h3>514 Dia</h3><div class="price">31,200 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
+        <div class="card"><h3>44 Dia</h3><div class="price">3,300 Ks</div><button class="btn-buy">Buy</button></div>
+        <div class="card"><h3>56 Dia</h3><div class="price">4,000 Ks</div><button class="btn-buy">Buy</button></div>
+        <div class="card"><h3>86 Dia</h3><div class="price">5,500 Ks</div><button class="btn-buy">Buy</button></div>
+        <div class="card"><h3>112 Dia</h3><div class="price">7,800 Ks</div><button class="btn-buy">Buy</button></div>
+        <div class="card"><h3>172 Dia</h3><div class="price">10,700 Ks</div><button class="btn-buy">Buy</button></div>
+        <div class="card"><h3>257 Dia</h3><div class="price">15,900 Ks</div><button class="btn-buy">Buy</button></div>
+        <div class="card"><h3>343 Dia</h3><div class="price">21,100 Ks</div><button class="btn-buy">Buy</button></div>
+        <div class="card"><h3>429 Dia</h3><div class="price">26,600 Ks</div><button class="btn-buy">Buy</button></div>
+        <div class="card"><h3>514 Dia</h3><div class="price">31,200 Ks</div><button class="btn-buy">Buy</button></div>
     </div>
 
     <footer>
