@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="my">
 <head>
@@ -18,7 +19,7 @@
             padding: 10px;
         }
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
         }
         header {
@@ -28,185 +29,108 @@
             margin-bottom: 20px;
         }
         header h1 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: #f5c842;
         }
         header p {
             color: #8892b0;
-            font-size: 1rem;
-        }
-        .section-title {
-            font-size: 1.5rem;
-            color: #f5c842;
-            margin: 20px 0 15px;
-            border-left: 5px solid #f5c842;
-            padding-left: 12px;
+            font-size: 0.9rem;
         }
 
-        /* ===== အဓိက - ၅ ကွက် ===== */
+        /* ===== ၃ ကွက်စီ ===== */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 10px;
-            margin-bottom: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 25px;
         }
 
-        /* ===== ဖုန်းအားလုံးမှာ ၅ ကွက်ပဲ ===== */
-        @media (max-width: 768px) {
+        /* ===== ဖုန်းမှာ ၂ ကွက်စီ ===== */
+        @media (max-width: 600px) {
             .product-grid {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr) !important;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+        }
+
+        /* ===== ဖုန်းအသေးဆုံး ၁ ကွက်စီ ===== */
+        @media (max-width: 400px) {
+            .product-grid {
+                grid-template-columns: 1fr;
                 gap: 6px;
             }
-            .card {
-                padding: 8px 4px !important;
-                border-radius: 10px !important;
-            }
-            .card h3 {
-                font-size: 0.55rem !important;
-                margin-bottom: 2px !important;
-            }
-            .card .bonus {
-                font-size: 0.5rem !important;
-            }
-            .card .price {
-                font-size: 0.7rem !important;
-                margin: 4px 0 !important;
-            }
-            .btn-buy {
-                padding: 3px 8px !important;
-                font-size: 0.5rem !important;
-                border-radius: 12px !important;
-                margin-top: 3px !important;
-            }
         }
 
-        @media (max-width: 480px) {
-            .product-grid {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr) !important;
-                gap: 4px;
-            }
-            .card {
-                padding: 6px 3px !important;
-                border-radius: 8px !important;
-            }
-            .card h3 {
-                font-size: 0.45rem !important;
-            }
-            .card .bonus {
-                font-size: 0.4rem !important;
-            }
-            .card .price {
-                font-size: 0.6rem !important;
-                margin: 3px 0 !important;
-            }
-            .btn-buy {
-                padding: 2px 6px !important;
-                font-size: 0.4rem !important;
-                border-radius: 10px !important;
-            }
-        }
-
+        /* ===== ကဒ်ပုံစံ - ရှည်မနေအောင် ===== */
         .card {
             background: #141b2b;
-            border-radius: 12px;
-            padding: 15px 10px;
+            border-radius: 10px;
+            padding: 10px 8px;
             text-align: center;
             border: 1px solid #1f2a3f;
             transition: 0.3s;
             cursor: pointer;
         }
         .card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             border-color: #f5c842;
-            box-shadow: 0 8px 20px rgba(245, 200, 66, 0.1);
-        }
-        .card:active {
-            animation: cardShake 0.3s ease;
+            box-shadow: 0 5px 15px rgba(245, 200, 66, 0.08);
         }
 
-        @keyframes cardShake {
-            0% { transform: rotate(0deg); }
-            25% { transform: rotate(-2deg); }
-            50% { transform: rotate(2deg); }
-            75% { transform: rotate(-1deg); }
-            100% { transform: rotate(0deg); }
+        /* ===== နှိပ်တဲ့အခါ သိမ်မွေ့တဲ့ အန်နီမေးရှင်း ===== */
+        .card:active {
+            transform: scale(0.97);
+            transition: 0.1s;
         }
 
         .card h3 {
-            font-size: 0.9rem;
-            margin-bottom: 3px;
+            font-size: 0.75rem;
+            margin-bottom: 2px;
             color: #fff;
         }
         .card .bonus {
-            font-size: 0.75rem;
+            font-size: 0.6rem;
             color: #64ffda;
         }
         .card .price {
-            font-size: 1.2rem;
+            font-size: 0.9rem;
             font-weight: bold;
             color: #f5c842;
-            margin: 6px 0;
+            margin: 4px 0;
         }
 
+        /* ===== ခလုတ် - သိမ်မွေ့အောင် ===== */
         .btn-buy {
             background: #f5c842;
             color: #0b0e1a;
             border: none;
-            padding: 6px 16px;
-            border-radius: 20px;
+            padding: 4px 12px;
+            border-radius: 15px;
             font-weight: bold;
             cursor: pointer;
-            transition: 0.3s;
-            margin-top: 6px;
-            font-size: 0.8rem;
-            position: relative;
-            overflow: hidden;
+            transition: 0.2s;
+            font-size: 0.6rem;
+            margin-top: 4px;
         }
         .btn-buy:hover {
             background: #ffd966;
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
+
+        /* ===== နှိပ်တဲ့အခါ သိမ်မွေ့တဲ့ ခလုတ်အန်နီမေးရှင်း ===== */
         .btn-buy:active {
-            animation: btnBounce 0.3s ease;
-            background: #ff6b6b;
-            color: #fff;
-        }
-
-        @keyframes btnBounce {
-            0% { transform: scale(1); }
-            40% { transform: scale(1.2); }
-            70% { transform: scale(0.9); }
-            100% { transform: scale(1); }
-        }
-
-        .btn-buy::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            transform: translate(-50%, -50%);
-            transition: width 0.4s, height 0.4s, opacity 0.4s;
-            pointer-events: none;
-        }
-        .btn-buy:active::after {
-            width: 200px;
-            height: 200px;
-            opacity: 0;
+            transform: scale(0.92);
+            background: #e6b33a;
+            transition: 0.08s;
         }
 
         footer {
             text-align: center;
             margin-top: 30px;
-            padding: 15px;
+            padding: 12px;
             border-top: 1px solid #1f2a3f;
             color: #8892b0;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
         }
     </style>
 </head>
@@ -219,33 +143,26 @@
     </header>
 
     <!-- ===== BUNDLES ===== -->
-    <h2 class="section-title">🎁 အထုပ်များ</h2>
     <div class="product-grid">
-        <div class="card"><h3>Monthly Epic</h3><div class="bonus">275+★180</div><div class="price">17,200 Ks</div><button class="btn-buy">ဝယ်</button></div>
-        <div class="card"><h3>Weekly Elite</h3><div class="bonus">55+★20</div><div class="price">3,350 Ks</div><button class="btn-buy">ဝယ်</button></div>
-        <div class="card"><h3>Weekly Pass</h3><div class="price">6,500 Ks</div><button class="btn-buy">ဝယ်</button></div>
-        <div class="card"><h3>11 Dia</h3><div class="price">1,000 Ks</div><button class="btn-buy">ဝယ်</button></div>
-        <div class="card"><h3>22 Dia</h3><div class="price">1,750 Ks</div><button class="btn-buy">ဝယ်</button></div>
+        <div class="card"><h3>Monthly Epic</h3><div class="bonus">275+★180</div><div class="price">17,200 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
+        <div class="card"><h3>Weekly Elite</h3><div class="bonus">55+★20</div><div class="price">3,350 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
+        <div class="card"><h3>Weekly Pass</h3><div class="price">6,500 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
+        <div class="card"><h3>11 Dia</h3><div class="price">1,000 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
+        <div class="card"><h3>22 Dia</h3><div class="price">1,750 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
+        <div class="card"><h3>33 Dia</h3><div class="price">2,500 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
     </div>
 
-    <!-- ===== SMALL DIAMONDS ===== -->
-    <h2 class="section-title">💎 စိန်အသေး</h2>
+    <!-- ===== DIAMONDS (စိန်အသေး + အလတ် အကုန်ပေါင်းထား) ===== -->
     <div class="product-grid">
-        <div class="card"><h3>33 Dia</h3><div class="price">2,500 Ks</div><button class="btn-buy">ဝယ်</button></div>
-        <div class="card"><h3>44 Dia</h3><div class="price">3,300 Ks</div><button class="btn-buy">ဝယ်</button></div>
-        <div class="card"><h3>56 Dia</h3><div class="price">4,000 Ks</div><button class="btn-buy">ဝယ်</button></div>
-        <div class="card"><h3>86 Dia</h3><div class="price">5,500 Ks</div><button class="btn-buy">ဝယ်</button></div>
-        <div class="card"><h3>112 Dia</h3><div class="price">7,800 Ks</div><button class="btn-buy">ဝယ်</button></div>
-    </div>
-
-    <!-- ===== NORMAL DIAMONDS ===== -->
-    <h2 class="section-title">💎 စိန်အလတ်</h2>
-    <div class="product-grid">
-        <div class="card"><h3>172 Dia</h3><div class="price">10,700 Ks</div><button class="btn-buy">ဝယ်</button></div>
-        <div class="card"><h3>257 Dia</h3><div class="price">15,900 Ks</div><button class="btn-buy">ဝယ်</button></div>
-        <div class="card"><h3>343 Dia</h3><div class="price">21,100 Ks</div><button class="btn-buy">ဝယ်</button></div>
-        <div class="card"><h3>429 Dia</h3><div class="price">26,600 Ks</div><button class="btn-buy">ဝယ်</button></div>
-        <div class="card"><h3>514 Dia</h3><div class="price">31,200 Ks</div><button class="btn-buy">ဝယ်</button></div>
+        <div class="card"><h3>44 Dia</h3><div class="price">3,300 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
+        <div class="card"><h3>56 Dia</h3><div class="price">4,000 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
+        <div class="card"><h3>86 Dia</h3><div class="price">5,500 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
+        <div class="card"><h3>112 Dia</h3><div class="price">7,800 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
+        <div class="card"><h3>172 Dia</h3><div class="price">10,700 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
+        <div class="card"><h3>257 Dia</h3><div class="price">15,900 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
+        <div class="card"><h3>343 Dia</h3><div class="price">21,100 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
+        <div class="card"><h3>429 Dia</h3><div class="price">26,600 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
+        <div class="card"><h3>514 Dia</h3><div class="price">31,200 Ks</div><button class="btn-buy">ဝယ်ရန်</button></div>
     </div>
 
     <footer>
